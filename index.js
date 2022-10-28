@@ -14,10 +14,13 @@ div.addEventListener("click", (e) => {
     classProcess();
   }
   if (check === true) {
-    setTimeout(classClick, 2000);
+    setTimeout(classClick, Math.floor(Math.random() * 4 + 1) * 2000);
+    console.log(Math.floor(Math.random() * 4 + 1) * 2000);
   }
   if (check2 === true && div === e.target) {
-    h1.innerHTML = `Your reation time is :${Date.now() - firstTime}`;
+    h1.innerHTML = `Your reation time is :${
+      new Date(Date.now() - firstTime).getTime() / 1000
+    } seconds`;
   }
 });
 
@@ -43,5 +46,5 @@ function timeStart() {
 }
 
 // Getting time in seconds
-let newDateTime = Number(new Date(Date.now() - firstTime).getTime() / 1000);
-console.log(newDateTime);
+// let newDateTime = Number(new Date(Date.now() - firstTime).getTime() / 1000);
+// console.log(newDateTime);
