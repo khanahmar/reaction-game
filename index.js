@@ -14,8 +14,11 @@ div.addEventListener("click", (e) => {
     classProcess();
   }
   if (check === true) {
-    setTimeout(classClick, Math.floor(Math.random() * 4 + 1) * 2000);
-    console.log(Math.floor(Math.random() * 4 + 1) * 2000);
+    processingTime();
+    check3 = true;
+  }
+  if ((check3 = true)) {
+    !processingTime();
   }
   if (check2 === true && div === e.target) {
     h1.innerHTML = `Your reation time is :${
@@ -36,7 +39,6 @@ function classClick() {
   div.classList.add("click");
   div.innerHTML = "Now click";
   firstTime = timeStart();
-  console.log(firstTime);
   check2 = true;
 }
 
@@ -45,6 +47,7 @@ function timeStart() {
   return (firstDate = Date.now());
 }
 
-// Getting time in seconds
-// let newDateTime = Number(new Date(Date.now() - firstTime).getTime() / 1000);
-// console.log(newDateTime);
+// Function Processing time
+function processingTime() {
+  setTimeout(classClick, Math.floor(Math.random() * 4 + 1) * 1000);
+}
